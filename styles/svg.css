@@ -1,0 +1,13 @@
+a.light {
+  cursor: pointer;
+  fill: #E6E6E6;
+}
+
+a.dark {
+  cursor: pointer;
+  fill: #444444;
+}
+
+a:hover, a:focus {
+  fill: #D4625E;
+}
