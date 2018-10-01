@@ -1,0 +1,141 @@
+/* ============ COLOR PALETTE ============
+* #608D8F - Blue-Green (prev: #5C7D89)
+* #363B4E - Dark Blue
+* #563947 - Dark Red
+* #D4625E - Light Red (prev: #CD626A)
+* #E8AC90 - Light Orange
+* #DECF93 - Light Yellow (prev: #D4E7C2 Light Green)
+======================================= */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', Palatino, serif;
+}
+
+body {
+  background-color: #363B4E;
+  color:#E6E6E6;
+  font-weight: 300;
+}
+
+header {
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+h1 {
+  margin: 0px;
+  padding-top: 30px;
+}
+
+h2 {
+  color: #DECF93;
+}
+
+#wrapper {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#about {
+  font-size: 1.3rem;
+  line-height: 2em;
+  margin-top: 40px;
+  max-width: 600px;
+}
+
+#about p {
+  font-size: 1.8rem;
+  margin-bottom: 36px;
+  margin-top: 36px;
+}
+
+#resume {
+  background-color: #E6E6E6;
+  color: #444444;
+  padding: 17px 20px 0px 20px;
+}
+
+#resume section {
+  padding-bottom: 20px;
+}
+
+#resume h2,h3,h4 {
+  margin: 0px;
+  margin-right: 8px;
+}
+
+#resume h2 {
+  color: #D4625E;
+}
+
+#resume h3 {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+#resume h4 {
+  font-size: 0.9rem;
+}
+
+#resume hr {
+  border: 1px solid #444444;
+  border-bottom: none;
+  margin: 5px 0px 5px;
+}
+
+#resume ul {
+  margin: 0px;
+}
+
+#resume li {
+  line-height: 1.5rem;
+}
+
+#resume em {
+  color: #D4625E;
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-title, .right-title {
+  align-items: flex-end;
+  display: flex;
+}
+
+.right-title {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.title-date {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 0px;
+  text-align: right;
+}
+
+.red-dot {
+  color: #D4625E;
+  font-weight: bold;
+}
