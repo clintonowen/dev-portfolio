@@ -1,14 +1,23 @@
 'use strict';
 
-Pts.quickStart( "#pt", "transparent" );
+window.addEventListener('resize', () => {
+  space.removeAll();
+  document.getElementById('pt_canvas').remove();
+  Pts.quickStart( '#pt', 'transparent' );
+  animatePts();
+}, true);
 
-(function() {
+Pts.quickStart( '#pt', 'transparent' );
+
+function animatePts() {
   let pts = new Group();
 
   space.add({ 
     start:( bound ) => {
+      let count = space.innerBound[1][0] * 0.05;
+      if (count > 150) count = 150;
       // create a random distribution of points
-      pts = Create.distributeRandom( space.innerBound, 50 );
+      pts = Create.distributeRandom( space.innerBound, count );
       // add a brightness value to each point
       pts.forEach(pt => pt.brightness = 0.1);
     }, 
@@ -34,12 +43,13 @@ Pts.quickStart( "#pt", "transparent" );
         }
 
         form.stroke(`rgba(255,255,255,${p.brightness})`).line( [ p, lp ] );
-        form.fillOnly( ["#D4625E"][i%3] ).point( p, 1 );
+        form.fillOnly( ['#D4625E'][i%3] ).point( p, 1 );
       });
     },
 
   });
 
   space.bindMouse().bindTouch().play();
+}
 
-})();
+animatePts();
