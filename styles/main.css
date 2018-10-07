@@ -76,7 +76,9 @@ nav {
   height: 100px;
   margin-left: auto;
   margin-right: auto;
+  pointer-events: none;
   position: relative;
+  z-index: 10;
 }
 
 #about {
@@ -93,7 +95,11 @@ nav {
   margin-bottom: 36px;
   margin-top: 36px;
   text-align: center;
+}
+
+#about .text {
   pointer-events: none;
+  position: relative;
 }
 
 #resume {
@@ -145,10 +151,6 @@ nav {
   font-size: 1.0rem;
 }
 
-#resume h4 > object {
-  margin-left: 10px;
-}
-
 #resume h4 > em {
   padding-inline-start: 10px;
 }
@@ -182,26 +184,8 @@ nav {
   text-align: center;
 }
 
-a.svg {
-  height: 40px;
-  padding: 0px;
-  position: relative;
-  display: inline-block;
-}
-
-a.svg:after {
-  background: none;
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 40px;
-  width: 40px;
-}
-
-#info object {
-  border: 1px solid #D4625E;
-  border-radius: 8px;
+#preload {
+  display: none;
 }
 
 .resume-section {
@@ -222,7 +206,7 @@ a.svg:after {
   position: absolute;
 }
 
-h1 > object:hover ~ .clint-dot {
+h1 > a:hover ~ .clint-dot {
   -webkit-animation-name: bounce;
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -304,4 +288,86 @@ h1 > object:hover ~ .clint-dot {
   animation-name: bounce;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
+}
+
+.email,
+.phone,
+.github,
+.linkedin,
+.twitter {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.email {
+  background-image: url('/img/envelope-square-solid.png');
+}
+
+.email:hover {
+  background-image: url('/img/envelope-square-solid_hover.png');
+}
+
+.phone {
+  background-image: url('/img/phone-square-solid.png');
+}
+
+.phone:hover {
+  background-image: url('/img/phone-square-solid_hover.png');
+}
+
+.github {
+  background-image: url('/img/github-square-brands.png');
+}
+
+.github:hover {
+  background-image: url('/img/github-square-brands_hover.png');
+}
+
+.linkedin {
+  background-image: url('/img/linkedin-brands.png');
+}
+
+.linkedin:hover {
+  background-image: url('/img/linkedin-brands_hover.png');
+}
+
+.twitter {
+  background-image: url('/img/twitter-square-brands.png');
+}
+
+.twitter:hover {
+  background-image: url('/img/twitter-square-brands_hover.png');
+}
+
+.git-link,
+.live-link {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px 16px;
+  height: 16px;
+  margin-left: 8px;
+  width: 20px;
+}
+
+.git-link {
+  background-image: url('/img/github-alt-brands.png');
+}
+
+.git-link:hover {
+  background-image: url('/img/github-alt-brands_hover.png');
+}
+
+.live-link {
+  background-image: url('/img/laptop-solid.png');
+}
+
+.live-link:hover {
+  background-image: url('/img/laptop-solid_hover.png');
+}
+
+.pointer {
+  pointer-events: all;
 }
