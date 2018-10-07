@@ -18,7 +18,7 @@ function animatePts() {
       if (count > 150) count = 150;
       // create a random distribution of points
       pts = Create.distributeRandom( space.innerBound, count );
-      // add a brightness value to each point
+      // add a brightness property to each point
       pts.forEach(pt => pt.brightness = 0.1);
     }, 
 
@@ -28,21 +28,29 @@ function animatePts() {
       pts.rotate2D( 0.0005, space.center );
 
       pts.forEach( (p, i) => {
-        // find the point's perpendicular intersection with the off-screen "Op"
+        // find the point's perpendicular intersection with the "Op" line
         let lp = perpend( p );
 
-        // get perpendicular distance from mouse to this point's line
+        // get distance from mouse to this point's line
         let ln = new Group( p, lp ).op( Line.perpendicularFromPt );
-        let dist = ln(space.pointer).$subtract(space.pointer).magnitudeSq();
+        let pointerDist = ln(space.pointer).$subtract(space.pointer).magnitude();
 
         // adjust line brightness by proximity to pointer
-        if (dist < 1000 && p.brightness < 0.5) {
+        if (pointerDist < 50 && p.brightness < 0.3) {
           p.brightness += 0.015;
         } else if (p.brightness > 0.1) {
           p.brightness -= 0.01;
         }
 
-        form.stroke(`rgba(255,255,255,${p.brightness})`).line( [ p, lp ] );
+        // get maximum distance to "Op" line (from innerBound's bottom-left)
+        let pBL = new Pt([0, space.innerBound[1][1]]);
+        let distMax = perpend(pBL).$subtract(pBL).magnitude();
+        // get distance from point to "Op" line
+        let distPt = lp.$subtract(p).magnitude();
+        // set ratio to make "closer" lines thicker
+        let widthRatio = distPt / distMax;
+
+        form.stroke(`rgba(255,255,255,${p.brightness})`, 3 * widthRatio).line( [ p, lp ] );
         form.fillOnly( ['#D4625E'][i%3] ).point( p, 1 );
       });
     },
