@@ -26,7 +26,7 @@ button:focus {
 
 nav ul {
   padding-inline-start: 0;
-  padding-right: 80px;
+  padding-right: 20px;
   position: relative;
   text-align: center;
   top: 14px;
@@ -34,8 +34,8 @@ nav ul {
 
 nav li {
   display: inline-block;
-  font-size: 1.2rem;
-  margin-left: 80px;
+  font-size: 1rem;
+  margin-left: 20px;
 }
 
 h1 {
@@ -74,14 +74,13 @@ button {
 }
 
 #pt {
-  background: #363B4E;
   height: 100vh;
   left: 0;
+  pointer-events: auto;
   position: absolute;
   top: 0;
-  overflow: hidden;
   width: 100%;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 #wrapper {
@@ -94,15 +93,16 @@ button {
 }
 
 #intro {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   height: 70vh;
   line-height: 2em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30vh;
   max-width: 700px;
+  /* pointer-events: none; */
   text-align: center;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 #intro p {
@@ -115,24 +115,27 @@ button {
 }
 
 #intro-text p {
-  /* pointer-events: none; */
+  pointer-events: none;
   position: relative;
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 #intro button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position: absolute;
+  bottom: 80px;
+  left: calc(50vw - 20px);
 }
 
 #clinton-owen {
   position: relative;
+  bottom: 2px;
 }
 
 /* #nav-bar {
@@ -200,11 +203,11 @@ button {
 }
 
 .arrow {
-	width: 5vmin;
-	height: 5vmin;
+	width: 40px;
+	height: 40px;
 	background: transparent;
-	border-left: 1vmin solid white;
-	border-top: 1vmin solid white;
+	border-left: 7px solid white;
+	border-top: 7px solid white;
 	box-shadow: 0 0 0 lightgray;
   transition: all 200ms ease;
   transform: rotate(225deg);
@@ -242,11 +245,11 @@ button {
 }
 
 .clint-dot {
-  left: 184px;
+  left: 141px;
   position: absolute;
 }
 
-#clinton-owen img:hover ~ .clint-dot {
+#clinton-owen picture:hover ~ .clint-dot {
   -webkit-animation-name: bounce;
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -327,5 +330,24 @@ button {
   90% {
     -webkit-transform: translate3d(0, -4px, 0);
     transform: translate3d(0, -4px, 0);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  nav ul {
+    padding-right: 80px;
+  }
+  nav li {
+    font-size: 1.2rem;
+    margin-left: 80px;
+  }
+  #intro {
+    font-size: 1.8rem;
+  }
+  #clinton-owen {
+    bottom: 0px;
+  }
+  .clint-dot {
+    left: 184px;
   }
 }

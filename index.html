@@ -21,6 +21,7 @@
   <script type="text/javascript" src="scripts/pts.min.js"></script>
   <script>
     $(document).ready(function() {
+      // let lockTimer;
       $(window).scroll(function () {
         if ($(window).scrollTop() > window.innerHeight) {
           $('#nav-bar').addClass('navbar-fixed');
@@ -28,6 +29,15 @@
         if ($(window).scrollTop() < window.innerHeight + 1) {
           $('#nav-bar').removeClass('navbar-fixed');
         }
+        // Prevent Hover on Scroll
+        // clearTimeout(lockTimer);
+        // if(!$('body').hasClass('disable-hover')) {
+        //   $('body').addClass('disable-hover')
+        // }
+
+        // lockTimer = setTimeout(function(){
+        //   $('body').removeClass('disable-hover')
+        // }, 500);
       });
     });
   </script>
@@ -40,8 +50,13 @@
         <div id="pt"></div>
         <div id="intro-text">
           <p>
-            Hello, I'm <span id="clinton-owen">
-              <img width="182px" src="img/clinton-owen-red.png" alt="Clinton Owen" class="pointer" style="position:relative; left:1px; top:4px" />
+            Hello, I'm
+            <span class="pointer" id="clinton-owen">
+              <picture>
+                <source srcset="img/clinton-owen-red-sm.png" media="(max-width: 599px)">
+                <source srcset="img/clinton-owen-red.png">
+                <img src="img/clinton-owen-red.png" alt="Clinton Owen" class="pointer" style="position:relative; left:1px; top:4px" />
+              </picture>
               <span class="red bold clint-dot">.</span>
             </span>
           </p>
