@@ -14,57 +14,172 @@
   <link rel="stylesheet" href="styles/grid.css">
   <link rel="stylesheet" href="styles/main.css">
 
+  <!-- HOSTED SCRIPTS -->
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
   <!-- LOCAL SCRIPTS -->
   <script type="text/javascript" src="scripts/pts.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // let lockTimer;
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > window.innerHeight) {
+          $('#nav-bar').addClass('navbar-fixed');
+        }
+        if ($(window).scrollTop() < window.innerHeight + 1) {
+          $('#nav-bar').removeClass('navbar-fixed');
+        }
+        // Prevent Hover on Scroll
+        // clearTimeout(lockTimer);
+        // if(!$('body').hasClass('disable-hover')) {
+        //   $('body').addClass('disable-hover')
+        // }
+
+        // lockTimer = setTimeout(function(){
+        //   $('body').removeClass('disable-hover')
+        // }, 500);
+      });
+    });
+  </script>
 </head>
 <body>
+  <div id="body-anchor"></div>
   <div id="wrapper">
-    <header>
-      <h1>
-        <a href="/">
-          <img width="182.3px" src="img/clinton-owen-no-dot.png" alt="Clinton Owen" class="pointer"/>
-        </a>
-        <span class="clint-dot">.</span>
-      </h1>
-
-      <!-- <nav>
-        <ul>
-          <li><a href="#about" class="pointer">About</a></li>
-          <li><a href="#projects" class="pointer">Projects</a></li>
-          <li><a href="#contact" class="pointer">Contact</a></li>
-        </ul>
-      </nav> -->
-    </header>
-    
     <main>
-      <section id="about">
+      <section id="intro">
         <div id="pt"></div>
-        <div class="text">
+        <div id="intro-text">
           <p>
-            Hello, I'm Clint<span class="red-dot">.</span>
+            Hello, I'm
+            <span class="pointer" id="clinton-owen">
+              <picture>
+                <source srcset="img/clinton-owen-red-sm.png" media="(max-width: 599px)">
+                <source srcset="img/clinton-owen-red.png">
+                <img src="img/clinton-owen-red.png" alt="Clinton Owen" class="pointer" style="position:relative; left:1px; top:4px" />
+              </picture>
+              <span class="red bold clint-dot">.</span>
+            </span>
           </p>
           <p>
-            I'm a software developer from Chicago, IL and I produce full-stack, responsive web applications<span class="red-dot">.</span><br/>
+            I develop responsive, full-stack web applications<span class="red bold">.</span>
           </p>
           <!-- <p>
-            I pride myself in writing clean, maintainable, accessible code and I strive to make the web a better place with every line that I write<span class="red-dot">.</span>
-          </p>
-          <br> -->
-          <!-- <p>Take a look at what I've been up to...</p>
-          <br>
-          <p><button class="pointer">Go</button></p> -->
+            I pride myself in writing clean, maintainable, accessible code and I strive to make the web a better place with every line that I write<span class="red dot">.</span>
+          </p> -->
+          <!-- <p>
+            Take a look at what I've been up to<span class="red bold">.</span><span class="red bold">.</span><span class="red bold">.</span>
+          </p> -->
         </div>
+        <button class="blank-button pointer" onClick="$('#projects-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+          <div class="arrow"></div>
+        </button>
       </section>
+
+      <nav id="nav-bar" class="navbar">
+        <div id="nav-wrapper">
+          <ul>
+            <li>
+              <button class="blank-button nav-button" onClick="$('#projects-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+                Projects
+              </button>
+            </li>
+            <li>
+              <button class="blank-button nav-button" onClick="$('#about-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+                About
+              </button>
+            </li>
+            <li>
+              <button class="blank-button nav-button" onClick="$('#contact-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+                Contact
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
       
-      <!-- <section id="projects">
+      <section id="projects" class="relative">
+        <div id="projects-anchor" class="section-anchor"></div>
         <h2>Projects</h2>
-    
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
       </section>
       
-      <section id="contact">
+      <section id="about" class="relative">
+        <div id="about-anchor" class="section-anchor"></div>
+        <h2>About</h2>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+      </section>
+
+      <section id="contact" class="relative">
+        <div id="contact-anchor" class="section-anchor"></div>
         <h2>Contact</h2>
-    
-      </section> -->
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+        <p>ALL THE THINGS</p>
+      </section>
     </main>
   </div>
 </body>
