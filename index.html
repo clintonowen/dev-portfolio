@@ -70,7 +70,7 @@
             Take a look at what I've been up to<span class="red bold">.</span><span class="red bold">.</span><span class="red bold">.</span>
           </p> -->
         </div>
-        <button class="blank-button pointer" onClick="$('#projects-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+        <button class="blank-button pointer" onClick="$('html, body').animate({scrollTop: $('#projects-anchor').offset().top}, 1000);">
           <div class="arrow"></div>
         </button>
       </section>
@@ -79,17 +79,17 @@
         <div id="nav-wrapper">
           <ul>
             <li>
-              <button class="blank-button nav-button" onClick="$('#projects-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+              <button class="blank-button nav-button" onClick="$('html, body').animate({scrollTop: $('#projects-anchor').offset().top}, 1000);">
                 Projects
               </button>
             </li>
             <li>
-              <button class="blank-button nav-button" onClick="$('#about-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+              <button class="blank-button nav-button" onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);">
                 About
               </button>
             </li>
             <li>
-              <button class="blank-button nav-button" onClick="$('#contact-anchor')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">
+              <button class="blank-button nav-button" onClick="$('html, body').animate({scrollTop: $('#contact-anchor').offset().top}, 1000);">
                 Contact
               </button>
             </li>
