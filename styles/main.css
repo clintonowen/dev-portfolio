@@ -7,6 +7,11 @@
 * #DECF93 - Light Yellow (prev: #D4E7C2 Light Green)
 ======================================= */
 
+@font-face {
+  font-family: Pacifico;
+  src: url(Pacifico.ttf);
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Roboto Slab', Palatino, serif;
@@ -26,16 +31,17 @@ button:focus {
 
 nav ul {
   padding-inline-start: 0;
-  padding-right: 20px;
-  position: relative;
-  text-align: center;
-  top: 14px;
+  /* padding-right: 20px; */
+  position: absolute;
+  text-align: right;
+  top: 16px;
+  right: 20px;
 }
 
 nav li {
   display: inline-block;
   font-size: 1rem;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 h1 {
@@ -131,12 +137,7 @@ button {
 
 #clinton-owen {
   position: relative;
-  bottom: 2px;
 }
-
-/* #nav-bar {
-
-} */
 
 #nav-wrapper {
   max-width: 1080px;
@@ -146,10 +147,21 @@ button {
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
+  top: 2px;
+}
+
+#nav-wrapper h1 {
+  font-size: 1.55rem;
 }
 
 #projects {
   margin-top: 100px;
+}
+
+.cursive {
+  font-family: Pacifico;
+  font-size: 1.1em;
+  font-weight: lighter;
 }
 
 .relative {
@@ -241,11 +253,15 @@ button {
 }
 
 .clint-dot {
-  left: 141px;
+  left: 139px;
   position: absolute;
 }
 
-#clinton-owen picture:hover ~ .clint-dot {
+.nav-dot {
+  top: 11px;
+}
+
+#clinton-owen:hover > .clint-dot {
   -webkit-animation-name: bounce;
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -331,11 +347,12 @@ button {
 
 @media only screen and (min-width: 600px) {
   nav ul {
-    padding-right: 80px;
+    padding-right: 20px;
+    top: 14px;
   }
   nav li {
     font-size: 1.2rem;
-    margin-left: 80px;
+    margin-left: 30px;
   }
   #pt {
     pointer-events: auto;
@@ -346,7 +363,16 @@ button {
   #clinton-owen {
     bottom: 0px;
   }
+  #nav-wrapper {
+    top: auto;
+  }
+  #nav-wrapper h1 {
+    font-size: 2rem;
+  }
   .clint-dot {
-    left: 184px;
+    left: 179px;
+  }
+  .nav-dot {
+    top: 15px;
   }
 }
