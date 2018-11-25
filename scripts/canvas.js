@@ -25,7 +25,7 @@ function animatePts() {
     animate: (time, ftime) => {
       // make a line off-screen and turn it into an "Op" to get perpendiculars
       let perpend = new Group( new Pt([space.innerBound[1][0],1]), new Pt([space.innerBound[1][0]-2,0]) ).op( Line.perpendicularFromPt );
-      pts.rotate2D( 0.0005, space.center );
+      pts.rotate2D( 0.001, space.center );
 
       pts.forEach( (p, i) => {
         // find the point's perpendicular intersection with the "Op" line
@@ -50,7 +50,7 @@ function animatePts() {
         // set ratio to make "closer" lines thicker
         let widthRatio = distPt / distMax;
 
-        form.stroke(`rgba(255,255,255,${p.brightness})`, 3 * widthRatio).line( [ p, lp ] );
+        form.stroke(`rgba(255,255,255,${p.brightness})`, 1.5 * widthRatio).line( [ p, lp ] );
         form.fillOnly( ['#D4625E'][i%3] ).point( p, 1 );
       });
     },
