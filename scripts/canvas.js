@@ -25,7 +25,7 @@ function animatePts() {
     animate: (time, ftime) => {
       // make a line off-screen and turn it into an "Op" to get perpendiculars
       let perpend = new Group( new Pt([space.innerBound[1][0],1]), new Pt([space.innerBound[1][0]-2,0]) ).op( Line.perpendicularFromPt );
-      pts.rotate2D( 0.001, space.center );
+      pts.rotate2D( 0.0008, space.center );
 
       pts.forEach( (p, i) => {
         // find the point's perpendicular intersection with the "Op" line
