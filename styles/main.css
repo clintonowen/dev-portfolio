@@ -30,12 +30,10 @@ button:focus {
 }
 
 nav ul {
+  bottom: 8px;
   padding-inline-start: 0;
-  /* padding-right: 20px; */
-  position: absolute;
-  text-align: right;
-  top: 16px;
-  right: 20px;
+  position: relative;
+  text-align: center;
 }
 
 nav li {
@@ -45,8 +43,10 @@ nav li {
 }
 
 h1 {
+  font-size: 1.55rem;
   margin: 0px;
-  padding-top: 22px;
+  margin-top: 6px;
+  text-align: center;
 }
 
 h2 {
@@ -57,8 +57,8 @@ a,
 a:visited {
   color: #E6E6E6;
   cursor: pointer;
-  position: relative;
   padding-bottom: 3px;
+  position: relative;
   text-decoration-color: #D4625E;
   transition: color 0.25s;
 }
@@ -74,9 +74,9 @@ button {
 }
 
 #body-anchor {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
 }
 
 #pt {
@@ -89,9 +89,9 @@ button {
 }
 
 #wrapper {
-  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1080px;
   overflow-x: hidden;
   padding-left: 20px;
   padding-right: 20px;
@@ -127,12 +127,12 @@ button {
 }
 
 #intro button {
+  bottom: 80px;
   display: block;
+  left: calc(50vw - 20px);
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  bottom: 80px;
-  left: calc(50vw - 20px);
 }
 
 #clinton-owen {
@@ -140,18 +140,14 @@ button {
 }
 
 #nav-wrapper {
-  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1080px;
   overflow: hidden;
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
   top: 2px;
-}
-
-#nav-wrapper h1 {
-  font-size: 1.55rem;
 }
 
 #projects {
@@ -169,8 +165,8 @@ button {
 }
 
 .section-anchor {
-  position: absolute;
   left: 0;
+  position: absolute;
   top: -100px;
 }
 
@@ -183,9 +179,6 @@ button {
 
 .nav-button {
   color: #E6E6E6;
-  font-weight: 300;
-  text-decoration: underline;
-  text-decoration-color: #D4625E;
   transition: color 0.25s;
 }
 
@@ -193,6 +186,11 @@ button {
 .nav-button:focus {
   color: #D4625E;
   transition: color 0.25s;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #D4625E;
 }
 
 .navbar {
@@ -204,21 +202,21 @@ button {
 }
 
 .navbar-fixed {
-  top: 0;
-  z-index: 100;
   position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .arrow {
-	width: 40px;
-	height: 40px;
-	background: transparent;
+  background: transparent;
 	border-left: 7px solid white;
 	border-top: 7px solid white;
 	box-shadow: 0 0 0 lightgray;
+  height: 40px;
   transition: all 200ms ease;
   transform: rotate(225deg);
+	width: 40px;
 }
 
 #intro button:hover > .arrow,
@@ -232,12 +230,12 @@ button {
 /* for better hit area */
 .arrow:before {
   content: '';
+  height: 190%;
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-70%,-70%) rotate(45deg);
   width: 150%;
-  height: 190%;
 }
 
 .pointer {
@@ -253,7 +251,8 @@ button {
 }
 
 .clint-dot {
-  left: 139px;
+  bottom: -2px;
+  left: 140px;
   position: absolute;
 }
 
@@ -348,6 +347,9 @@ button {
 @media only screen and (min-width: 600px) {
   nav ul {
     padding-right: 20px;
+    position: absolute;
+    right: 20px;
+    text-align: right;
     top: 14px;
   }
   nav li {
@@ -366,8 +368,10 @@ button {
   #nav-wrapper {
     top: auto;
   }
-  #nav-wrapper h1 {
+  h1 {
     font-size: 2rem;
+    margin-top: 22px;
+    text-align: start;
   }
   .clint-dot {
     left: 179px;
