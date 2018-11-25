@@ -65,13 +65,13 @@ a:visited {
   padding-bottom: 3px;
   position: relative;
   text-decoration-color: #D4625E;
-  transition: color 0.25s;
+  transition: all 0.25s;
 }
 
 a:hover,
 a:focus {
   color: #D4625E;
-  transition: color 0.25s;
+  transition: all 0.25s;
 }
 
 button {
@@ -104,11 +104,11 @@ button {
 
 #intro {
   font-size: 1.4rem;
-  height: 70vh;
+  height: 80vh;
   line-height: 2em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30vh;
+  margin-top: 20vh;
   max-width: 700px;
   text-align: center;
 }
@@ -199,7 +199,8 @@ button {
 }
 
 .navbar {
-  background: hsl(228, 18%, 20%);
+  background: #292d3c;
+  box-shadow: 0px 2px 8px rgb(30, 30, 30);
   height: 80px;
   left: 0;
   position: absolute;
@@ -253,6 +254,73 @@ button {
 
 .bold {
   font-weight: bold;
+}
+
+.project {
+  background: #292d3c;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgb(30, 30, 30);
+  display: block;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.project h3 {
+  font-size: 1.8em;
+}
+
+.project h3 a {
+  color: #D4625E;
+  text-decoration-color: transparent;
+}
+
+.project h3 a:hover {
+  text-decoration-color: #D4625E;
+}
+
+.project h3,
+.project h4 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.project h4 a {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.project-txt {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  padding-right: 20px;
+}
+
+.project-txt-rev {
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.project-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.project-img img {
+  border: 2px solid #292d3c;
+  border-radius: 4px;
+  max-width: 400px;
+  transition: all 0.25s;
+  width: 100%;
+}
+
+.project-img img:hover {
+  border: 2px solid #D4625E;
+  transition: all 0.25s;
 }
 
 .clint-dot {
@@ -351,7 +419,7 @@ button {
 
 @media only screen and (min-width: 600px) {
   nav ul {
-    padding-right: 20px;
+    /* padding-right: 20px; */
     position: absolute;
     right: 20px;
     text-align: right;
@@ -366,6 +434,8 @@ button {
   }
   #intro {
     font-size: 1.8rem;
+    height: 70vh;
+    margin-top: 30vh;
   }
   #clinton-owen {
     bottom: 0px;
@@ -383,5 +453,24 @@ button {
   }
   .nav-dot {
     top: 15px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .project {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: none;
+  }
+  .project-rev {
+    flex-direction: row-reverse;
+  }
+  .project-img {
+    width: auto;
+  }
+  .project-img img {
+    max-width: none;
+    width: 100%;
   }
 }
