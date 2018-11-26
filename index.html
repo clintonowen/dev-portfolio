@@ -42,13 +42,13 @@
 <body>
   <div id="body-anchor"></div>
   <div id="wrapper">
-    <main>
-      <section id="intro">
+    <main role="main">
+      <section role="region" id="intro">
         <div id="pt"></div>
         <div id="intro-text">
           <p>
             Hello, I'm
-            <span class="pointer cursive red" id="clinton-owen">
+            <span class="pointer cursive red name">
               Clinton Owen
               <span class="red bold clint-dot">.</span>
             </span>
@@ -63,21 +63,23 @@
             Take a look at what I've been up to<span class="red bold">.</span><span class="red bold">.</span><span class="red bold">.</span>
           </p> -->
         </div>
-        <button class="blank-button pointer" onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);">
+        <button title="Scroll Down" class="blank-button pointer" onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);">
           <div class="arrow"></div>
         </button>
       </section>
 
-      <nav id="nav-bar" class="navbar">
+      <nav role="navigation" id="nav-bar" class="navbar">
         <div id="nav-wrapper">
-          <h1>
-            <button class="blank-button nav-button" onClick="$('html, body').animate({scrollTop: $('#body-anchor').offset().top}, 1000);">
-              <span class="cursive" id="clinton-owen" style="font-size: 0.99em;">
-                Clinton Owen
-                <span class="red bold clint-dot nav-dot">.</span>
-              </span>
-            </button>
-          </h1>
+          <header role="banner">
+            <h1>
+              <button class="blank-button nav-button" onClick="$('html, body').animate({scrollTop: $('#body-anchor').offset().top}, 1000);">
+                <span class="cursive name" style="font-size: 0.99em;">
+                  Clinton Owen
+                  <span class="red bold clint-dot nav-dot">.</span>
+                </span>
+              </button>
+            </h1>
+          </header>
 
           <ul>
             <li>
@@ -99,15 +101,15 @@
         </div>
       </nav>
 
-      <section id="about" class="relative">
+      <section role="region" id="about" class="relative">
         <div id="about-anchor" class="section-anchor"></div>
         <h2>About Me</h2>
         <div id="about-wrapper">
-          <section id="about-photo">
+          <section role="region" id="about-photo">
             <img src="img/clint-photo.jpeg" alt="Photo of Clinton Owen" />
           </section>
 
-          <section id="about-text">
+          <section role="region" id="about-text">
             <p>Since designing and building my first professional website as a side-project in 2011, I've been captivated by the structured freedom that coding provides. The thriving world of software development excites me with its ever-expanding possibilities.</p>
   
             <p>I love discovering new ways to improve my code and collaborating with creative people who inspire me to push the limits of my knowledge. I take pride in writing clean, testable, maintainable code and one of the most rewarding aspects is when I can develop an elegant solution to a complex problem.</p>
@@ -124,7 +126,7 @@
         </div>
       </section>
       
-      <section id="projects" class="relative">
+      <section role="region" id="projects" class="relative">
         <div id="projects-anchor" class="section-anchor"></div>
         <h2>Projects</h2>
 
@@ -141,12 +143,18 @@
             <br>
             <p class="center">Built with:</p>
             <p class="center">
-              <i class="fab fa-html5 fa-2x" style="color: #EF4F19"></i>
-              <i class="fab fa-css3-alt fa-2x" style="color: #1064AB"></i>
-              <i class="fab fa-js fa-2x" style="color: #F9DF42"></i>
-              <i class="fab fa-react fa-2x" style="color: #46DCF9"></i>
-              <img class="logo" src="img/logo-redux.png" alt="Redux" />
-              <i class="fab fa-node-js fa-2x" style="color: #76CD42"></i>
+              <span class="hidden">HTML5</span>
+              <span class="fab fa-html5 fa-2x" style="color: #EF4F19" aria-hidden="true"></span>
+              <span class="hidden">CSS3</span>
+              <span class="fab fa-css3-alt fa-2x" style="color: #1064AB" aria-hidden="true"></span>
+              <span class="hidden">JavaScript</span>
+              <span class="fab fa-js fa-2x" style="color: #F9DF42" aria-hidden="true"></span>
+              <span class="hidden">React</span>
+              <span class="fab fa-react fa-2x" style="color: #46DCF9" aria-hidden="true"></span>
+              <span class="hidden">Redux</span>
+              <img class="logo" src="img/logo-redux.png" alt="Redux" aria-hidden="true"/>
+              <span class="hidden">Node.js</span>
+              <span class="fab fa-node-js fa-2x" style="color: #76CD42" aria-hidden="true"></span>
             </p>
             <!--
               Front End:
@@ -194,12 +202,18 @@
             <br>
             <p class="center">Built with:</p>
             <p class="center">
-              <i class="fab fa-html5 fa-2x" style="color: #EF4F19"></i>
-              <i class="fab fa-css3-alt fa-2x" style="color: #1064AB"></i>
-              <i class="fab fa-js fa-2x" style="color: #F9DF42"></i>
-              <i class="fab fa-react fa-2x" style="color: #46DCF9"></i>
-              <img class="logo" src="img/logo-redux.png" alt="Redux" />
-              <i class="fab fa-node-js fa-2x" style="color: #76CD42"></i>
+              <span class="hidden">HTML5</span>
+              <span class="fab fa-html5 fa-2x" style="color: #EF4F19" aria-hidden="true"></span>
+              <span class="hidden">CSS3</span>
+              <span class="fab fa-css3-alt fa-2x" style="color: #1064AB" aria-hidden="true"></span>
+              <span class="hidden">JavaScript</span>
+              <span class="fab fa-js fa-2x" style="color: #F9DF42" aria-hidden="true"></span>
+              <span class="hidden">React</span>
+              <span class="fab fa-react fa-2x" style="color: #46DCF9" aria-hidden="true"></span>
+              <span class="hidden">Redux</span>
+              <img class="logo" src="img/logo-redux.png" alt="Redux" aria-hidden="true"/>
+              <span class="hidden">Node.js</span>
+              <span class="fab fa-node-js fa-2x" style="color: #76CD42" aria-hidden="true"></span>
             </p>
             <!-- 
               Front-End:
@@ -260,12 +274,18 @@
             <br>
             <p class="center">Built with:</p>
             <p class="center">
-              <i class="fab fa-html5 fa-2x" style="color: #EF4F19"></i>
-              <i class="fab fa-css3-alt fa-2x" style="color: #1064AB"></i>
-              <i class="fab fa-js fa-2x" style="color: #F9DF42"></i>
-              <i class="fab fa-react fa-2x" style="color: #46DCF9"></i>
-              <img class="logo" src="img/logo-redux.png" alt="Redux" />
-              <i class="fab fa-node-js fa-2x" style="color: #76CD42"></i>
+              <span class="hidden">HTML5</span>
+              <span class="fab fa-html5 fa-2x" style="color: #EF4F19" aria-hidden="true"></span>
+              <span class="hidden">CSS3</span>
+              <span class="fab fa-css3-alt fa-2x" style="color: #1064AB" aria-hidden="true"></span>
+              <span class="hidden">JavaScript</span>
+              <span class="fab fa-js fa-2x" style="color: #F9DF42" aria-hidden="true"></span>
+              <span class="hidden">React</span>
+              <span class="fab fa-react fa-2x" style="color: #46DCF9" aria-hidden="true"></span>
+              <span class="hidden">Redux</span>
+              <img class="logo" src="img/logo-redux.png" alt="Redux" aria-hidden="true"/>
+              <span class="hidden">Node.js</span>
+              <span class="fab fa-node-js fa-2x" style="color: #76CD42" aria-hidden="true"></span>
             </p>
             <!-- 
               Front End:
@@ -298,29 +318,52 @@
         </article>
       </section>
 
-      <section id="contact" class="relative">
+      <section role="region" id="contact" class="relative">
         <div id="contact-anchor" class="section-anchor"></div>
-
         <h2>Get In Touch</h2>
-
-        <a href="mailto:clint@clintonowen.com" target="_blank" class="contact-logo no-underline">
+        <a
+          href="mailto:clint@clintonowen.com"
+          target="_blank"
+          class="contact-logo no-underline"
+          aria-label="Email"
+        >
           <i class="fas fa-envelope-square fa-3x"></i>
         </a>
-        <a href="tel:847-363-7952" target="_blank" class="contact-logo no-underline">
+        <a
+          href="tel:847-363-7952"
+          target="_blank"
+          class="contact-logo no-underline"
+          aria-label="Phone Number"
+        >
           <i class="fas fa-phone-square fa-3x"></i>
         </a>
-        <a href="https://github.com/clintonowen" target="_blank" class="contact-logo no-underline">
+        <a
+          href="https://github.com/clintonowen"
+          target="_blank"
+          class="contact-logo no-underline"
+          aria-label="GitHub"
+        >
           <i class="fab fa-github-square fa-3x"></i>
         </a>
-        <a href="https://www.linkedin.com/in/clinton-owen/" target="_blank" class="contact-logo no-underline">
+        <a
+          href="https://www.linkedin.com/in/clinton-owen/"
+          target="_blank"
+          class="contact-logo no-underline"
+          aria-label="LinkedIn"
+        >
           <i class="fab fa-linkedin fa-3x"></i>
         </a>
-        <a href="https://twitter.com/CoderClint" target="_blank" class="contact-logo no-underline">
+        <a
+          href="https://twitter.com/CoderClint"
+          target="_blank"
+          class="contact-logo no-underline"
+          aria-label="Twitter"
+        >
           <i class="fab fa-twitter-square fa-3x"></i>
         </a>
       </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
       <p id="copyright">© Clinton Owen 2018</p>
     </footer>
   </div>

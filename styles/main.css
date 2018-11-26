@@ -152,10 +152,6 @@ button {
   position: absolute;
 }
 
-#clinton-owen {
-  position: relative;
-}
-
 #nav-wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -228,6 +224,14 @@ button {
 
 #contact-anchor {
   top: -140px;
+}
+
+.hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .no-underline {
@@ -412,17 +416,21 @@ button {
   margin-right: 5px;
 }
 
-.clint-dot {
-  bottom: -2px;
-  left: 140px;
-  position: absolute;
+.name {
+  position: relative;
 }
 
 .nav-dot {
   top: 11px;
 }
 
-#clinton-owen:hover > .clint-dot {
+.clint-dot {
+  bottom: -2px;
+  left: 140px;
+  position: absolute;
+}
+
+.name:hover > .clint-dot {
   -webkit-animation-name: bounce;
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
