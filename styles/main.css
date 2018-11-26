@@ -47,6 +47,10 @@ nav li:nth-child(1) {
   margin-left: 0px;
 }
 
+footer {
+  text-align: center;
+}
+
 h1 {
   font-size: 1.55rem;
   margin: 0px;
@@ -56,6 +60,14 @@ h1 {
 
 h2 {
   color: #DECF93;
+  font-size: 2.3em;
+  text-align: center;
+}
+
+h3 {
+  color: #DECF93;
+  font-size: 1.8em;
+  text-align: center;
 }
 
 a,
@@ -155,8 +167,77 @@ button {
   top: 2px;
 }
 
-#projects {
+/* #projects {
   margin-top: 100px;
+} */
+
+#about {
+  left: 0;
+  margin-top: 160px;
+  position: relative;
+  width: 100%;
+}
+
+#about-anchor {
+  top: -160px;
+}
+
+#about-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+  overflow: hidden;
+  position: relative;
+}
+
+#about-photo {
+  text-align: center;
+}
+
+#about-photo img {
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgb(30, 30, 30);
+}
+
+#about-text {
+  max-width: 600px;
+}
+
+#projects {
+  margin-top: 80px;
+}
+
+#projects-anchor {
+  top: -160px;
+}
+
+#contact {
+  /* background: #292d3c; */
+  /* box-shadow: 0px 2px 8px rgb(30, 30, 30); */
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 60px; */
+  /* width: 100%; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+
+#contact-anchor {
+  top: -140px;
+}
+
+#contact-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+  overflow: hidden;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  position: relative;
 }
 
 .cursive {
@@ -267,10 +348,6 @@ button {
   padding: 20px;
 }
 
-.project h3 {
-  font-size: 1.8em;
-}
-
 .project h3 a {
   color: #D4625E;
   text-decoration-color: transparent;
@@ -321,6 +398,58 @@ button {
 .project-img img:hover {
   border: 2px solid #D4625E;
   transition: all 0.25s;
+}
+
+.email,
+.phone,
+.github,
+.linkedin,
+.twitter {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.email {
+  background-image: url('/img/envelope-square-solid.png');
+}
+
+.email:hover {
+  background-image: url('/img/envelope-square-solid_hover.png');
+}
+
+.phone {
+  background-image: url('/img/phone-square-solid.png');
+}
+
+.phone:hover {
+  background-image: url('/img/phone-square-solid_hover.png');
+}
+
+.github {
+  background-image: url('/img/github-square-brands.png');
+}
+
+.github:hover {
+  background-image: url('/img/github-square-brands_hover.png');
+}
+
+.linkedin {
+  background-image: url('/img/linkedin-brands.png');
+}
+
+.linkedin:hover {
+  background-image: url('/img/linkedin-brands_hover.png');
+}
+
+.twitter {
+  background-image: url('/img/twitter-square-brands.png');
+}
+
+.twitter:hover {
+  background-image: url('/img/twitter-square-brands_hover.png');
 }
 
 .clint-dot {
@@ -418,6 +547,11 @@ button {
 }
 
 @media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 22px;
+    text-align: start;
+  }
   nav ul {
     /* padding-right: 20px; */
     position: absolute;
@@ -443,10 +577,21 @@ button {
   #nav-wrapper {
     top: auto;
   }
-  h1 {
-    font-size: 2rem;
-    margin-top: 22px;
-    text-align: start;
+  #about-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  #about-photo img {
+    margin-right: 50px;
+  }
+  .email,
+  .phone,
+  .github,
+  .linkedin,
+  .twitter {
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .clint-dot {
     left: 179px;

@@ -21,6 +21,7 @@
   <script type="text/javascript" src="scripts/pts.min.js"></script>
   <script>
     $(document).ready(function() {
+      // Set navbar location
       $(window).scroll(function () {
         if ($(window).scrollTop() > window.innerHeight) {
           $('#nav-bar').addClass('navbar-fixed');
@@ -29,6 +30,10 @@
           $('#nav-bar').removeClass('navbar-fixed');
         }
       });
+
+      // Set copyright year
+      const year = (new Date()).getFullYear();
+      $('#copyright').text(`© Clinton Owen ${year}`);
     });
   </script>
 </head>
@@ -56,7 +61,7 @@
             Take a look at what I've been up to<span class="red bold">.</span><span class="red bold">.</span><span class="red bold">.</span>
           </p> -->
         </div>
-        <button class="blank-button pointer" onClick="$('html, body').animate({scrollTop: $('#projects-anchor').offset().top}, 1000);">
+        <button class="blank-button pointer" onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);">
           <div class="arrow"></div>
         </button>
       </section>
@@ -74,23 +79,48 @@
 
           <ul>
             <li>
-              <button class="blank-button nav-button underline" onClick="$('html, body').animate({scrollTop: $('#projects-anchor').offset().top}, 1000);">
-                Projects
-              </button>
-            </li>
-            <li>
               <button class="blank-button nav-button underline" onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);">
                 About
               </button>
             </li>
             <li>
+              <button class="blank-button nav-button underline" onClick="$('html, body').animate({scrollTop: $('#projects-anchor').offset().top}, 1000);">
+                Projects
+              </button>
+            </li>
+            <li>
               <button class="blank-button nav-button underline" onClick="$('html, body').animate({scrollTop: $('#contact-anchor').offset().top}, 1000);">
-                Contact
+                Get In Touch
               </button>
             </li>
           </ul>
         </div>
       </nav>
+
+      <section id="about" class="relative">
+        <div id="about-anchor" class="section-anchor"></div>
+        <h2>About</h2>
+        <div id="about-wrapper">
+          <section id="about-photo">
+            <img src="img/clint-photo.jpeg" alt="Photo of Clinton Owen" />
+          </section>
+
+          <section id="about-text">
+            <p>Since designing and building my first professional website as a side-project in 2011, I've been captivated by the structured freedom that coding provides. The thriving world of software development excites me with its ever-expanding possibilities.</p>
+  
+            <p>I love discovering new ways to improve my code and collaborating with creative people who inspire me to push the limits of my knowledge. I take pride in writing clean, testable, maintainable code and one of the most rewarding aspects is when I can develop an elegant solution to a complex problem.</p>
+  
+            <p>Want to chat about code, your favorite books, or 3D printing? <button class="blank-button nav-button underline" onClick="$('html, body').animate({scrollTop: $('#contact-anchor').offset().top}, 1000);">Get in touch with me.</button></p>
+          </section>
+
+          <!-- <h3>My Toolset</h3>
+          <ul>
+            <li><em>Languages:</em> JavaScript (ES5, ES6 & JSX), HTML5, CSS3</li>
+            <li><em>Libraries & Frameworks:</em> React/Redux, jQuery, Node, Express</li>
+            <li><em>Other Technologies:</em> Git/GitHub, NPM, REST APIs, AJAX, JSON, MongoDB, Mongoose, PostgreSQL, Knex.js, Passport.js, Travis CI, Heroku</li>
+          </ul> -->
+        </div>
+      </section>
       
       <section id="projects" class="relative">
         <div id="projects-anchor" class="section-anchor"></div>
@@ -137,85 +167,45 @@
             </picture>
           </a>
         </article>
-      </section>
-
-      <article class="project">
-        <div class="project-txt">
-          <h3>
-            <a href="https://un-hidden-figures-app-client.herokuapp.com/" target="_blank">UnHidden Figures</a>
-          </h3>
-          <p>UnHidden Figures is a learning application that uses a spaced repetition algorithm to teach users the names of influential women scientists. Scientists that a user continuously identifies correctly will appear less and less frequently, while those that the user struggles with will appear more often.</p>
-          <h4>
-            <!-- https://fontawesome.com/license -->
-            <a href="https://un-hidden-figures-app-client.herokuapp.com/" target="_blank">Live App</a>
-            <a href="https://github.com/thinkful-ei23/rose-clinton-spaced-rep-client" target="_blank">GitHub Repo</a>
-          </h4>
-        </div>
-
-        <a class="project-img" href="https://un-hidden-figures-app-client.herokuapp.com/" target="_blank">
-          <picture>
-            <source media="(min-width: 900px)" srcset="img/projects-UnHidden.png">
-            <img src="img/projects-UnHidden-sm.png" alt="Screenshot of UnHidden Figures">
-          </picture>
-        </a>
-      </article>
-      
-      <section id="about" class="relative">
-        <div id="about-anchor" class="section-anchor"></div>
-        <h2>About</h2>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
+        
+        <article class="project">
+          <div class="project-txt">
+            <h3>
+              <a href="https://un-hidden-figures-app-client.herokuapp.com/" target="_blank">UnHidden Figures</a>
+            </h3>
+            <p>UnHidden Figures is a learning application that uses a spaced repetition algorithm to teach users the names of influential women scientists. Scientists that a user continuously identifies correctly will appear less and less frequently, while those that the user struggles with will appear more often.</p>
+            <h4>
+              <!-- https://fontawesome.com/license -->
+              <a href="https://un-hidden-figures-app-client.herokuapp.com/" target="_blank">Live App</a>
+              <a href="https://github.com/thinkful-ei23/rose-clinton-spaced-rep-client" target="_blank">GitHub Repo</a>
+            </h4>
+          </div>
+          
+          <a class="project-img" href="https://un-hidden-figures-app-client.herokuapp.com/" target="_blank">
+            <picture>
+              <source media="(min-width: 900px)" srcset="img/projects-UnHidden.png">
+              <img src="img/projects-UnHidden-sm.png" alt="Screenshot of UnHidden Figures">
+            </picture>
+          </a>
+        </article>
       </section>
 
       <section id="contact" class="relative">
         <div id="contact-anchor" class="section-anchor"></div>
-        <h2>Contact</h2>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
-        <p>ALL THE THINGS</p>
+        <div id="contact-wrapper">
+          <h2>Get In Touch</h2>
+          <!-- https://fontawesome.com/license -->
+          <a href="mailto:clint@clintonowen.com" class="email" title="Email" target="_blank"></a>
+          <a href="tel:847-363-7952" class="phone" title="Phone" target="_blank"></a>
+          <a href="https://github.com/clintonowen" class="github" title="GitHub" target="_blank"></a>
+          <a href="https://www.linkedin.com/in/clinton-owen/" class="linkedin" title="LinkedIn" target="_blank"></a>
+          <a href="https://twitter.com/CoderClint" class="twitter" title="Twitter" target="_blank"></a>
+        </div>
       </section>
     </main>
+    <footer>
+      <p id="copyright">© Clinton Owen 2018</p>
+    </footer>
   </div>
 </body>
 </html>

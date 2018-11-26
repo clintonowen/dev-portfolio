@@ -111,58 +111,6 @@ header {
   float: right;
 }
 
-.email,
-.phone,
-.github,
-.linkedin,
-.twitter {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  height: 40px;
-  width: 40px;
-}
-
-.email {
-  background-image: url('/img/envelope-square-solid.png');
-}
-
-.email:hover {
-  background-image: url('/img/envelope-square-solid_hover.png');
-}
-
-.phone {
-  background-image: url('/img/phone-square-solid.png');
-}
-
-.phone:hover {
-  background-image: url('/img/phone-square-solid_hover.png');
-}
-
-.github {
-  background-image: url('/img/github-square-brands.png');
-}
-
-.github:hover {
-  background-image: url('/img/github-square-brands_hover.png');
-}
-
-.linkedin {
-  background-image: url('/img/linkedin-brands.png');
-}
-
-.linkedin:hover {
-  background-image: url('/img/linkedin-brands_hover.png');
-}
-
-.twitter {
-  background-image: url('/img/twitter-square-brands.png');
-}
-
-.twitter:hover {
-  background-image: url('/img/twitter-square-brands_hover.png');
-}
-
 .git-link,
 .live-link {
   display: inline-block;
