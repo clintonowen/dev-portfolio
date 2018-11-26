@@ -77,13 +77,16 @@ a:visited {
   padding-bottom: 3px;
   position: relative;
   text-decoration-color: #D4625E;
+  -webkit-text-decoration-color: #D4625E;
   transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 
 a:hover,
 a:focus {
   color: #D4625E;
   transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 
 button {
@@ -267,18 +270,21 @@ button {
 
 .nav-button {
   color: #E6E6E6;
-  transition: color 0.25s;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 
 .nav-button:hover,
 .nav-button:focus {
   color: #D4625E;
-  transition: color 0.25s;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 
 .underline {
   text-decoration: underline;
   text-decoration-color: #D4625E;
+  -webkit-text-decoration-color: #D4625E;
 }
 
 .navbar {
@@ -304,6 +310,7 @@ button {
 	box-shadow: 0 0 0 lightgray;
   height: 40px;
   transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
   transform: rotate(225deg);
 	width: 40px;
 }
@@ -353,10 +360,12 @@ button {
 .project h3 a {
   color: #D4625E;
   text-decoration-color: transparent;
+  -webkit-text-decoration-color: transparent;
 }
 
 .project h3 a:hover {
   text-decoration-color: #D4625E;
+  -webkit-text-decoration-color: #D4625E;
 }
 
 .project h3,
@@ -398,12 +407,14 @@ button {
   border-radius: 4px;
   max-width: 400px;
   transition: all 0.25s;
+  -webkit-transition: all 0.25s;
   width: 100%;
 }
 
 .project-img img:hover {
   border: 2px solid #D4625E;
   transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 
 .logo {
