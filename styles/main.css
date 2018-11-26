@@ -240,6 +240,14 @@ button {
   position: relative;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
 .cursive {
   font-family: Pacifico;
   font-size: 1.1em;
@@ -368,6 +376,10 @@ button {
   margin-right: 8px;
 }
 
+.fas {
+  text-decoration: none;
+}
+
 .project-txt {
   margin-left: auto;
   margin-right: auto;
@@ -398,6 +410,11 @@ button {
 .project-img img:hover {
   border: 2px solid #D4625E;
   transition: all 0.25s;
+}
+
+.logo {
+  bottom: -4px;
+  position: relative;
 }
 
 .email,
@@ -585,11 +602,7 @@ button {
   #about-photo img {
     margin-right: 50px;
   }
-  .email,
-  .phone,
-  .github,
-  .linkedin,
-  .twitter {
+  .contact-logo {
     margin-left: 10px;
     margin-right: 10px;
   }
