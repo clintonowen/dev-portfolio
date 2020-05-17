@@ -1,15 +1,29 @@
 'use strict';
 
-window.addEventListener('resize', () => {
-  space.removeAll();
-  document.getElementById('pt_canvas').remove();
-  Pts.quickStart( '#pt', 'transparent' );
-  animatePts();
-}, true);
+let windowWidth = window.innerWidth;
 
-Pts.quickStart( '#pt', 'transparent' );
+function restartPts(){
+  // We only want to restart Pts if the width changes
+  if (window.innerWidth === windowWidth) {
+    return;
+  } else {
+    windowWidth = window.innerWidth;
+    space.removeAll();
+    document.getElementById('pt_canvas').remove();
+    animatePts();
+  }
+}
+
+let resizeTimeout;
+window.onresize = function(){
+  // Timeout to avoid triggering restarts for every resize event
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(restartPts, 500);
+};
 
 function animatePts() {
+  Pts.quickStart( '#pt', 'transparent' );
+
   let pts = new Group();
 
   space.add({ 
