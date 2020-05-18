@@ -34,10 +34,11 @@
     $(document).ready(function() {
       // Set navbar location
       $(window).scroll(function () {
-        if ($(window).scrollTop() > window.innerHeight) {
+        const introHeight = document.getElementById('intro').clientHeight;
+        if ($(window).scrollTop() > introHeight) {
           $('#nav-bar').addClass('navbar-fixed');
         }
-        if ($(window).scrollTop() < window.innerHeight + 1) {
+        if ($(window).scrollTop() <= introHeight) {
           $('#nav-bar').removeClass('navbar-fixed');
         }
       });
@@ -71,10 +72,10 @@
           <!-- <p>
             Take a look at what I've been up to<span class="red bold">.</span><span class="red bold">.</span><span class="red bold">.</span>
           </p> -->
+          <button title="Scroll Down" class="blank-button pointer" onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);">
+            <div class="arrow"></div>
+          </button>
         </div>
-        <button title="Scroll Down" class="blank-button pointer" onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);">
-          <div class="arrow"></div>
-        </button>
       </section>
 
       <nav role="navigation" id="nav-bar" class="navbar">
