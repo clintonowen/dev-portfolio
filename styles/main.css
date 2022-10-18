@@ -18,8 +18,8 @@
 }
 
 body {
-  background-color: #363B4E;
-  color:#E6E6E6;
+  background-color: #363b4e;
+  color: #e6e6e6;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -59,32 +59,32 @@ h1 {
 }
 
 h2 {
-  color: #DECF93;
+  color: #decf93;
   font-size: 2.3em;
   text-align: center;
 }
 
 h3 {
-  color: #DECF93;
+  color: #decf93;
   font-size: 1.8em;
   text-align: center;
 }
 
 a,
 a:visited {
-  color: #E6E6E6;
+  color: #e6e6e6;
   cursor: pointer;
   padding-bottom: 3px;
   position: relative;
-  text-decoration-color: #D4625E;
-  -webkit-text-decoration-color: #D4625E;
+  text-decoration-color: #d4625e;
+  -webkit-text-decoration-color: #d4625e;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
 }
 
 a:hover,
 a:focus {
-  color: #D4625E;
+  color: #d4625e;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
 }
@@ -143,7 +143,7 @@ button {
 #intro-text p {
   pointer-events: none;
   position: relative;
-  -webkit-user-select: none; /* Safari */        
+  -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
@@ -232,7 +232,8 @@ button {
 
 .hidden {
   position: absolute !important;
-  height: 1px; width: 1px;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
@@ -270,22 +271,22 @@ button {
 }
 
 .nav-button {
-  color: #E6E6E6;
+  color: #e6e6e6;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
 }
 
 .nav-button:hover,
 .nav-button:focus {
-  color: #D4625E;
+  color: #d4625e;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
 }
 
 .underline {
   text-decoration: underline;
-  text-decoration-color: #D4625E;
-  -webkit-text-decoration-color: #D4625E;
+  text-decoration-color: #d4625e;
+  -webkit-text-decoration-color: #d4625e;
 }
 
 .navbar {
@@ -297,7 +298,7 @@ button {
   width: 100%;
 }
 
-.navbar-fixed {
+.navbar.fixed {
   position: fixed;
   top: 0;
   width: 100%;
@@ -306,21 +307,21 @@ button {
 
 .arrow {
   background: transparent;
-	border-left: 7px solid white;
-	border-top: 7px solid white;
-	box-shadow: 0 0 0 lightgray;
+  border-left: 7px solid white;
+  border-top: 7px solid white;
+  box-shadow: 0 0 0 lightgray;
   height: 40px;
   transition: all 200ms ease;
   -webkit-transition: all 200ms ease;
   transform: rotate(225deg);
-	width: 40px;
+  width: 40px;
 }
 
 #intro button:hover > .arrow,
 #intro button:focus > .arrow,
 .arrow:hover,
 .arrow:focus {
-  border-color: #D4625E;
+  border-color: #d4625e;
   box-shadow: -0.5vmin -0.5vmin 0 white;
 }
 
@@ -331,7 +332,7 @@ button {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-70%,-70%) rotate(45deg);
+  transform: translate(-70%, -70%) rotate(45deg);
   width: 150%;
 }
 
@@ -340,7 +341,7 @@ button {
 }
 
 .red {
-  color: #D4625E;
+  color: #d4625e;
 }
 
 .bold {
@@ -359,14 +360,14 @@ button {
 }
 
 .project h3 a {
-  color: #D4625E;
+  color: #d4625e;
   text-decoration-color: transparent;
   -webkit-text-decoration-color: transparent;
 }
 
 .project h3 a:hover {
-  text-decoration-color: #D4625E;
-  -webkit-text-decoration-color: #D4625E;
+  text-decoration-color: #d4625e;
+  -webkit-text-decoration-color: #d4625e;
 }
 
 .project h3,
@@ -413,7 +414,7 @@ button {
 }
 
 .project-img img:hover {
-  border: 2px solid #D4625E;
+  border: 2px solid #d4625e;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
 }

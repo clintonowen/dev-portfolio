@@ -1,19 +1,29 @@
 .grid {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .column {
-	box-sizing: border-box;
-	flex: 1;
+  box-sizing: border-box;
+  flex: 1;
 }
 
-.bigger { flex: 2.5; }
+.bigger {
+  flex: 2.5;
+}
 
-.halves .column  { flex: 0 0 50%; }
-.thirds .column  { flex: 0 0 33.3333%; }
-.fourths .column { flex: 0 0 25%; }
+.halves .column {
+  flex: 0 0 50%;
+}
+.thirds .column {
+  flex: 0 0 33.3333%;
+}
+.fourths .column {
+  flex: 0 0 25%;
+}
 
 @media (max-width: 840px) {
-	.grid { display: block; }
+  .grid {
+    display: block;
+  }
 }
