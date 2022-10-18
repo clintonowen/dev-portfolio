@@ -21,17 +21,20 @@
     />
 
     <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="preload"
+      href="/styles/Pacifico.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
 
     <!-- HOSTED STYLES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
     />
 
     <!-- LOCAL STYLES -->
@@ -41,30 +44,13 @@
 
     <!-- HOSTED SCRIPTS -->
     <script
-      src="https://code.jquery.com/jquery-latest.min.js"
-      type="text/javascript"
+      src="https://kit.fontawesome.com/7c47e12092.js"
+      crossorigin="anonymous"
     ></script>
 
     <!-- LOCAL SCRIPTS -->
     <script type="text/javascript" src="scripts/pts.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Set navbar location
-        $(window).scroll(function () {
-          const introHeight = document.getElementById('intro').clientHeight;
-          if ($(window).scrollTop() > introHeight) {
-            $('#nav-bar').addClass('fixed');
-          }
-          if ($(window).scrollTop() <= introHeight) {
-            $('#nav-bar').removeClass('fixed');
-          }
-        });
-
-        // Set copyright year
-        const year = new Date().getFullYear();
-        $('#copyright').text(`© Clinton Owen ${year}`);
-      });
-    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </head>
   <body>
     <div id="body-anchor"></div>
@@ -85,16 +71,10 @@
               maintainable, code and producing responsive, full-stack
               applications<span class="red bold">.</span>
             </p>
-            <!-- <p>
-            I pride myself in writing clean, maintainable, accessible code and I strive to make the web a better place with every line that I write<span class="red dot">.</span>
-          </p> -->
-            <!-- <p>
-            Take a look at what I've been up to<span class="red bold">.</span><span class="red bold">.</span><span class="red bold">.</span>
-          </p> -->
             <button
               title="Scroll Down"
+              id="intro-button"
               class="blank-button pointer"
-              onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);"
             >
               <div class="arrow"></div>
             </button>
@@ -105,10 +85,7 @@
           <div id="nav-wrapper">
             <header role="banner">
               <h1>
-                <button
-                  class="blank-button nav-button"
-                  onClick="$('html, body').animate({scrollTop: $('#body-anchor').offset().top}, 1000);"
-                >
+                <button id="nav-title-button" class="blank-button nav-button">
                   <span class="cursive name" style="font-size: 0.99em">
                     Clinton Owen
                     <span class="red bold clint-dot nav-dot">.</span>
@@ -120,24 +97,24 @@
             <ul>
               <li>
                 <button
+                  id="nav-about-button"
                   class="blank-button nav-button underline"
-                  onClick="$('html, body').animate({scrollTop: $('#about-anchor').offset().top}, 1000);"
                 >
                   About Me
                 </button>
               </li>
               <li>
                 <button
+                  id="nav-projects-button"
                   class="blank-button nav-button underline"
-                  onClick="$('html, body').animate({scrollTop: $('#projects-anchor').offset().top}, 1000);"
                 >
                   Projects
                 </button>
               </li>
               <li>
                 <button
+                  id="nav-contact-button"
                   class="blank-button nav-button underline"
-                  onClick="$('html, body').animate({scrollTop: $('#contact-anchor').offset().top}, 1000);"
                 >
                   Get In Touch
                 </button>
@@ -173,20 +150,13 @@
               <p>
                 Want to chat about code, your favorite books, or 3D printing?
                 <button
+                  id="about-contact-button"
                   class="blank-button nav-button underline"
-                  onClick="$('html, body').animate({scrollTop: $('#contact-anchor').offset().top}, 1000);"
                 >
                   Get in touch with me.
                 </button>
               </p>
             </section>
-
-            <!-- <h3>My Toolset</h3>
-          <ul>
-            <li><em>Languages:</em> JavaScript (ES5, ES6 & JSX), HTML5, CSS3</li>
-            <li><em>Libraries & Frameworks:</em> React/Redux, jQuery, Node, Express</li>
-            <li><em>Other Technologies:</em> Git/GitHub, NPM, REST APIs, AJAX, JSON, MongoDB, Mongoose, PostgreSQL, Knex.js, Passport.js, Travis CI, Heroku</li>
-          </ul> -->
           </div>
         </section>
 
@@ -258,29 +228,7 @@
                   aria-hidden="true"
                 ></span>
               </p>
-              <!--
-              Front End:
-              React (via create-react-app), React Router
-              Redux, Redux Thunk, Redux Form
-              React DnD, React Responsive, React Swipeable Views, Moment.js
-              JavaScript
-              HTML, CSS
-
-              Back End:
-              Node
-              Express
-              Passport, bcrypt (Local & JWT Authentication)
-              Mongoose
-              Mocha, Chai (Testing)
-
-              Database:
-              MongoDB
-
-              CICD:
-              Mocha, Chai
-              TravisCI
-              Heroku
-            --></div>
+            </div>
 
             <a
               class="project-img"
@@ -363,42 +311,7 @@
                   aria-hidden="true"
                 ></span>
               </p>
-              <!--
-              Front-End:
-              React
-              React-Howler
-              React - Redux
-              React-Router-Dom
-              React-Table
-              Redux
-              Redux-Form
-              Redux-Thunk
-              JavaScript
-              HTML5
-              RAF
-              CSS3
-
-              Back-End:
-              Node.js
-              Express.js
-              Mongoose
-              Passport
-              Bcryptjs
-              JWT
-              Morgan
-              Xml2js
-              Cors
-
-              Deployment:
-              Heroku
-              Github
-              MLab
-              Enzyme
-              Mocha
-              Chai
-              Chai-http
-              Cypress
-            --></div>
+            </div>
 
             <a
               class="project-img"
@@ -488,26 +401,7 @@
                   aria-hidden="true"
                 ></span>
               </p>
-              <!--
-              Front End:
-              React (via create-react-app), React Router
-              Redux, Redux Thunk, Redux Form
-              JavaScript
-              HTML, CSS
-
-              Back End:
-              Node
-              Express
-              Passport, bcrypt (Local & JWT Authentication)
-              Mongoose
-
-              Database:
-              MongoDB
-
-              Deployment:
-              Heroku
-              mLab
-            --></div>
+            </div>
 
             <a
               class="project-img"
@@ -529,52 +423,54 @@
         </section>
 
         <section role="region" id="contact" class="relative">
-          <div id="contact-anchor" class="section-anchor"></div>
           <h2>Get In Touch</h2>
-          <a
-            href="mailto:clint@clintonowen.com"
-            target="_blank"
-            class="contact-logo no-underline"
-            aria-label="Email"
-          >
-            <span class="fas fa-envelope-square fa-3x"></span>
-          </a>
-          <a
-            href="tel:847-363-7952"
-            target="_blank"
-            class="contact-logo no-underline"
-            aria-label="Phone Number"
-          >
-            <span class="fas fa-phone-square fa-3x"></span>
-          </a>
-          <a
-            href="https://github.com/clintonowen"
-            target="_blank"
-            class="contact-logo no-underline"
-            aria-label="GitHub"
-          >
-            <span class="fab fa-github-square fa-3x"></span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/clinton-owen/"
-            target="_blank"
-            class="contact-logo no-underline"
-            aria-label="LinkedIn"
-          >
-            <span class="fab fa-linkedin fa-3x"></span>
-          </a>
-          <a
-            href="https://twitter.com/CoderClint"
-            target="_blank"
-            class="contact-logo no-underline"
-            aria-label="Twitter"
-          >
-            <span class="fab fa-twitter-square fa-3x"></span>
-          </a>
+          <div id="contact-button-container">
+            <a
+              href="mailto:clint@clintonowen.com"
+              target="_blank"
+              class="contact-logo no-underline"
+              aria-label="Email"
+            >
+              <span class="fas fa-envelope-square fa-3x"></span>
+            </a>
+            <a
+              href="tel:847-363-7952"
+              target="_blank"
+              class="contact-logo no-underline"
+              aria-label="Phone Number"
+            >
+              <span class="fas fa-phone-square fa-3x"></span>
+            </a>
+            <a
+              href="https://github.com/clintonowen"
+              target="_blank"
+              class="contact-logo no-underline"
+              aria-label="GitHub"
+            >
+              <span class="fab fa-github-square fa-3x"></span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/clinton-owen/"
+              target="_blank"
+              class="contact-logo no-underline"
+              aria-label="LinkedIn"
+            >
+              <span class="fab fa-linkedin fa-3x"></span>
+            </a>
+            <a
+              href="https://twitter.com/CoderClint"
+              target="_blank"
+              class="contact-logo no-underline"
+              aria-label="Twitter"
+            >
+              <span class="fab fa-twitter-square fa-3x"></span>
+            </a>
+          </div>
         </section>
       </main>
       <footer role="contentinfo">
         <p id="copyright">© Clinton Owen 2018</p>
+        <div id="bottom-anchor"></div>
       </footer>
     </div>
   </body>
